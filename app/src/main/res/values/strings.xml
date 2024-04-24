@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">InventoryApp</string>
+    <string name="copy_edit">Editar</string>
+    <string name="copy_delete">Eliminar</string>
 </resources>

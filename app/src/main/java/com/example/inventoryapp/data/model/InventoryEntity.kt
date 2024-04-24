@@ -1,4 +1,4 @@
-package com.example.inventoryapp.model
+package com.example.inventoryapp.data.model
 
 
 data class InventoryEntity(
