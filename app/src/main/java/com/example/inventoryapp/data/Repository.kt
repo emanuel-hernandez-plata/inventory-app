@@ -22,9 +22,20 @@ class Repository {
 
     fun createProduct(name: String, price: Double) {
         val id = listInventory.value?.maxByOrNull { it.id }?.id?.plus(1) ?: 1
+        listInventory.postValue(
+            listInventory.value?.plus(
+                InventoryEntity(
+                    id = id,
+                    image = 3,
+                    name = name,
+                    price = price
+                )
+            )
+        )
+    }
 
-        listInventory.postValue(listInventory.value?.plus(InventoryEntity(id = id, image = 3 , name = name, price = price)))
-
+    fun editProduct(item: InventoryEntity) {
+        listInventory.postValue(listInventory.value?.map { if (it.id == item.id) item else it })
     }
 
 }

@@ -17,7 +17,8 @@ class AdapterInventory(
 
     init {
         listInventoryLiveData.observeForever {
-            listInventory = it
+            //listInventory = it
+            it?.let { listInventory = it }
             notifyDataSetChanged()
         }
     }
